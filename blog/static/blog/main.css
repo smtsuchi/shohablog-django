@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+}
+body {
+    min-height: 100vh;
+    position: relative;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: lightblue;
+}
+.main-blog  {
+    max-width: 700px;
+    width: 100%;
+}
+.form-box {
+    border: 1px solid lightblue;
+    border-radius: 20px;
+    padding: 2rem 1rem 1.5rem 1rem;
+}
+.btn-submit {
+    width: 100%
+}
+.messages {
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+    animation: success 4s ease forwards;
+}
+@keyframes success {
+    0% {
+      opacity: 0;
+      pointer-events: all;
+    }
+    10% {
+        opacity: 1;
+        pointer-events: all;
+      }
+    90% {
+      opacity: 1;
+      pointer-events: all;
+    }
+    100% {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+.success {background-color: palegreen;}
+.info {background-color: indianred;}

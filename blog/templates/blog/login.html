@@ -1,0 +1,23 @@
+{% extends "blog/base.html" %}
+    {% block content %}
+        <div class="form-box" >
+            <h1>Login</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id_username" class="form-label">Username :</label>
+                    <input type="text" name="username" maxlength="150" autocapitalize="none" class="form-control" autocomplete="username" autofocus="" id="id_username">
+                </div>
+                <div class="mb-3">
+                    <label for="id_password" class="form-label">Password</label>
+                    <input type="password" name="password" autocomplete="new-password" class="form-control" id="id_password">
+                </div>
+                <input type="submit" class="btn btn-primary btn-submit" value="Submit">
+            </form>
+
+            {% for message in messages %}
+            <p class="messages {{ message.tags }}">{{ message }}</p>
+            {% endfor %}
+            <div class="mt-2 text-center">Don't have an account? <a class="text-decoration-none" href="{% url 'blog-register' %}">Sign Up</a></div>
+        </div>
+    {% endblock content%}

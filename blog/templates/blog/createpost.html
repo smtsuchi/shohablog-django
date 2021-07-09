@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+    {% block content %}
+    <div class="form-box">
+        <h1>Create Post :</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_title" class="form-label">Title :</label>
+                <input type="text" name="title" maxlength="255" required="" autocapitalize="none" class="form-control" autofocus="" id="id_title">
+            </div>
+            <div class="d-none">
+                <input type="text" name="author" class="form-control" autofocus="" id="id_author" value="{{ request.user.id }}">
+            </div>
+            <div class="mb-3">
+                <label for="id_content" class="form-label">Content:</label>
+                <textarea class="form-control" name="content" cols="40" rows="10" required="" id="id_content"></textarea>
+            </div>
+            <input type="submit" class="btn btn-primary btn-submit" value="Post">
+        </form>
+    </div>
+    {% endblock content%}
