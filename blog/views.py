@@ -98,6 +98,39 @@ def testAPI(request):
     return JsonResponse(
         {
             "name": "Launch-1",
-            "students": ['Chien', 'Dan', "Jerry", "Jerry", "Koki", "Olivia", "Peter", "Young"],
+            "students": [
+                {
+                    "first_name": 'Chien',
+                    "last_name": "Yu"
+                },
+                {
+                    "first_name": 'Dan',
+                    "last_name": "Nguyen"
+                },
+                {
+                    "first_name": 'Jerry',
+                    "last_name": "Chang"
+                },
+                {
+                    "first_name": 'Jerry',
+                    "last_name": "Chen"
+                },
+                {
+                    "first_name": 'Koki',
+                    "last_name": "Okano"
+                },
+                {
+                    "first_name": 'Olivia',
+                    "last_name": "Awasthi"
+                },
+                {
+                    "first_name": 'Peter',
+                    "last_name": "Huang"
+                },
+                {
+                    "first_name": 'Young',
+                    "last_name": "Woo"
+                },
+            ],
         }
     )
