@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from django.http import HttpResponse
+from django.http import JsonResponse
 
 # import all your forms to be used
 from .forms import PostForm, CreateUserForm
@@ -93,3 +93,11 @@ def loginPage(request):
 def logoutUser(request):
     logout(request)
     return redirect('blog-login')
+
+def testAPI(request):
+    return JsonResponse(
+        {
+            "name": "Launch-1",
+            "students": ['Chien', 'Dan', "Jerry", "Jerry", "Koki", "Olivia", "Peter", "Young"],
+        }
+    )
